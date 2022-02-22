@@ -1,0 +1,146 @@
+"" ==========
+" ~/.vimrc
+"" ==========
+set nocompatible
+set term=builtin_xterm
+"set notermbidi 
+"" ==========
+"" ==========
+" === Auto load for first time uses
+"if empty(glob($HOME.'/.vim/autoload/plug.vim'))
+"	silent !curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs
+"				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+"endif
+"" ==========
+"call plug#begin('~/.vim/plugged')
+"Plug 'itchyny/lightline.vim'
+"call plug#end()
+"" ==========
+syntax on
+set ls=2
+set nobackup 
+set autochdir
+set number
+set clipboard=unnamedplus
+set scrolloff=5
+"" ==========
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+"" ==========
+set smartindent
+set tabstop=4
+set shiftwidth=4 
+noremap <silent><tab> >>
+noremap <silent><s-tab> <<
+"" ==========
+noremap ; :
+noremap s :w<CR>
+noremap r :source $HOME/.vimrc<CR>
+noremap U :redo<CR> 
+noremap \ "0p
+"" ==========
+nnoremap <esc>[1;3D :q<CR>  "<a-left>   " -- sed l 
+"" ==========
+"noremap j h
+"noremap k j
+"noremap i k
+"" ==========
+inoremap ( ()<esc>i
+inoremap [ []<esc>i
+inoremap { {}<esc>i
+inoremap < <><esc>i
+inoremap ' ''<esc>i
+inoremap " ""<esc>i
+"" ==========
+noremap a i
+noremap A a
+"" ==========
+noremap <c-h> <c-w>h
+noremap <c-l> <c-w>l
+noremap <c-j> <c-w>j
+noremap <c-k> <c-w>k
+"" ==========
+noremap <expr>0 col('.') == 1 ? '^': '0'
+"noremap <c-left> b 
+"noremap <c-left> :w<CR> 
+noremap <a-right> w
+noremap <expr>0 col('.') == 1 ? '^': '0'
+"" ==========
+"" ==========
+"nnoremap <silent><F6> 0i"<esc>0
+"inoremap <silent><F6> <esc>0i"<esc>0
+"vmap <silent><F7> :'<,'>normal 0i"<CR>
+"nnoremap <silent><F7> ^<right>T"X
+"vmap <silent><F8> :'<,'>normal 0<right>T"X<CR>
+"" ==========
+func! Run()
+exec "w"
+if &filetype == 'sh'
+    :!clear
+    :!time bash % 
+elseif &filetype == 'python'
+    :!clear
+    exec "!time python %"
+endif
+endfunc
+map <F5> :call Run()<CR>
+imap <F5> <esc>:call Run()<CR>
+
+" ===
+" === Create a _machine_specific.vim file to adjust machine specific stuff, like python interpreter location
+" ===
+"let has_machine_specific_file = 1
+"if empty(glob('~/.vim/_machine_specific.vim'))
+"  let has_machine_specific_file = 0
+"  exec "!cp ~/.vim/default_configs/_machine_specific_default.vim ~/.vim/_machine_specific.vim"
+"endif
+"source ~/.vim/_machine_specific.vim
+
+"" ==========
+func! Comment()
+if &filetype == 'vim'
+    nnoremap <silent><F6> 0i"<esc>0
+    inoremap <silent><F6>  <esc>0i"<esc>0
+    nnoremap <silent><F7>  ^<right>T"X
+elseif &filetype == 'sh'
+    nnoremap <silent><F6> 0i#<esc>0
+    inoremap <silent><F6> <esc>0i#<esc>0
+    nnoremap <silent><F7> ^<right>T#X
+elseif &filetype == 'xmodmap'
+    nnoremap <silent><F6> 0i!<esc>0
+    inoremap <silent><F6> <esc>0i!<esc>0
+    nnoremap <silent><F7> ^<right>T!X
+elseif &filetype == 'verilog'
+    nnoremap <silent><F6> 0i/<esc>0
+    inoremap <silent><F6> <esc>0i/<esc>0
+    nnoremap <silent><F7> ^<right>T/X
+else
+    nnoremap <silent><F6> 0i#<esc>0
+    inoremap <silent><F6> <esc>0i#<esc>0
+    nnoremap <silent><F7> ^<right>T#X
+endif
+endfunc
+call Comment()
+"" ==========
+
+"" ==========
+func! Comment2()
+if &filetype == 'vim'
+    nnoremap 33 <esc>o"" ==========<esc>
+elseif &filetype == 'sh'
+    nnoremap 33 <esc>o## ==========<esc>
+elseif &filetype == 'xmodmap'
+    nnoremap 33 <esc>o!! ==========<esc>
+elseif &filetype == 'verilog'
+    nnoremap 33 <esc>o// ==========<esc>
+else
+    nnoremap 33 <esc>o## ==========<esc>
+endif
+endfunc
+call Comment2()
+"" ==========
+
+
+"" ==========

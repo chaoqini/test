@@ -1,0 +1,20 @@
+! 9 Escape
+! 66 Caps_Lock
+! 105 Control_R
+! 134 Super_R 
+! 135 Menu 
+
+
+keycode 9 = Escape NoSymbol Escape
+!keycode 66 = Caps_Lock NoSymbol Caps_Lock
+keycode 105 = Control_R NoSymbol Control_R
+keycode 134 = Super_R NoSymbol Super_R
+keycode 135 = Menu NoSymbol Menu
+!add Lock
+
+!remove Lock = Caps_Lock
+!clear Menu
+!clear Lock
+!keycode 135 = Caps_Lock NoSymbol Caps_Lock
+!!keycode 134 = Caps_Lock NoSymbol Caps_Lock
+!keycode 66 = Escape NoSymbol Escape

@@ -1,0 +1,25 @@
+font:
+  normal:
+    family: Source Code Pro
+    style: Regular
+
+  bold:
+    family: Source Code Pro
+    style: Bold
+
+  italic:
+    family: Source Code Pro
+    style: Italic
+
+  bold_italic:
+    family: Source Code Pro
+    style: Bold Italic
+
+  size: 15
+
+#env:
+#  WINIT_X11_SCALE_FACTOR: "1.0"
+#- { key:Left, mods:Alt, action:Quit }
+#- { key:q, mods:Alt, action:Quit }
+key_bindings:
+- {key: Q, mods: Alt, action: Quit}

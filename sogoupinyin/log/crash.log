@@ -1,0 +1,31 @@
+hwsig:561c0b95551a45be87e40b2adb6d30c3
+version:3.4.0.9700
+Application:/opt/sogoupinyin/files/bin/Service
+
+stack:
+!!!---received signal: 11段错误
+MachineID = 561c0b95551a45be87e40b2adb6d30c3
+SysVersion = ManjaroLinux 21.2.3 
+CurUsingProcess = systemd (sd-pam) dbus-daemon gvfsd gvfsd-fuse at-spi-bus
+Ime_version = 3.4.0.9700, Stack trace 
+0 /opt/sogoupinyin/files/bin/sogoupinyin-service() [0x48f36c] 
+1 /opt/sogoupinyin/files/bin/sogoupinyin-service() [0x48fcf4] 
+2 /usr/lib/libc.so.6(+0x3cda0) [0x7f4b6b82fda0] 
+3 /usr/lib/libstdc++.so.6(_ZNKSs5rfindEcm+0x28) [0x7f4b6bc0a3b8] 
+4 /opt/sogoupinyin/files/bin/../lib/libSogouIme.so(_ZN8n_sgAuth11t_trailAuth18UpdataDataFileTimeEv+0x47) [0x7f4b6dc8f8cd] 
+5 /opt/sogoupinyin/files/bin/../lib/libSogouIme.so(_ZN8n_sgAuth11t_trailAuth27UpdataSystemLogoffTimestampEi+0x25) [0x7f4b6dc90841] 
+6 /opt/sogoupinyin/files/bin/sogoupinyin-service() [0x48fb58] 
+7 /usr/lib/libc.so.6(+0x3cda0) [0x7f4b6b82fda0] 
+8 /usr/lib/libLLVM-13.so(+0xa94d67) [0x7f4b3e17cd67] 
+9 /usr/lib/libc.so.6(+0x3f4a7) [0x7f4b6b8324a7] 
+10 /usr/lib/libc.so.6(+0x3f64e) [0x7f4b6b83264e] 
+11 /opt/sogoupinyin/files/bin/sogoupinyin-service() [0x48fb9a] 
+12 /usr/lib/libc.so.6(+0x3cda0) [0x7f4b6b82fda0] 
+13 /usr/lib/libc.so.6(__poll+0x4f) [0x7f4b6b8e6b2f] 
+14 /usr/lib/libglib-2.0.so.0(+0xab066) [0x7f4b64e0e066] 
+15 /usr/lib/libglib-2.0.so.0(g_main_context_iteration+0x35) [0x7f4b64db5485] 
+16 /opt/sogoupinyin/files/bin/../lib/qt5/lib/libQt5Core.so.5(_ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x57) [0x7f4b6c01da87] 
+17 /opt/sogoupinyin/files/bin/../lib/qt5/lib/libQt5Core.so.5(_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+0x132) [0x7f4b6bfc6212] 
+18 /opt/sogoupinyin/files/bin/../lib/qt5/lib/libQt5Core.so.5(_ZN16QCoreApplication4execEv+0x8d) [0x7f4b6bfcdd3d] 
+19 /opt/sogoupinyin/files/bin/sogoupinyin-service(main+0x50c) [0x4902e5] 
+

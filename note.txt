@@ -1,0 +1,25 @@
+## ==========
+## ==========
+ ranger常用快捷键
+<F1>    help
+<F2>    rename
+<F3>    display
+<F4>    edit
+<F5>    copy
+<F6>    cut
+<F7>    mkdir
+<F8>    delete
+V       进入/退出多选模式
+空格    多选
+v       反选/全选
+yy      复制
+dd      剪切
+pp      粘贴
+/       搜索（tab切换下一个）
+o       排序
+q       退出
+ctrl+n  多标签
+shift+s 进入当前目录
+## ==========
+## ==========
+

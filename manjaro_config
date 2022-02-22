@@ -1,0 +1,147 @@
+## ==========
+sudo pacman-mirrors -i -c China -m rank
+AUR助手yay
+sudo pacman -S yay
+## yay -S paru
+更新系统:
+yay -Syyu
+## ==========
+
+## ==========
+yay -S package 
+yay -Rsc package
+## ==========
+
+## ==========
+yay -S fish
+## ==========
+yay -S gvim
+## ==========
+
+## ==========
+yay -S fcitx-im fcitx-configtool
+yay -S fcitx-sogoupinyin
+添加输入法配置文件，输入命令：
+vim ~/.profile
+export EDITOR=/usr/bin/vim
+#export TERMINAL=alacritty
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+## ==========
+
+
+## ==========
+yay -S ranger
+将默认配置文件复制到该文件~/.config/range
+ranger --copy-config=all
+rc.conf : set show_hidden true
+rifle.conf : $EDITOR -> vim
+## ==========
+
+## ==========
+yay -S alacritty
+字体更换：
+monospace -> Source Code Pro
+manjaro_config
+## ==========
+
+## ==========
+yay -S i3
+cp /etc/i3/config  ~/.config/i3/config -> : Mod1 changeto $mod
+Manjaro i3wm替换默认程序配置:
+vim ~/.config/mimeapps.list 
+## ==========
+#安装polybar
+#yay -S polybar-git
+#安装图标字体
+#yay -S ttf-font-awesome
+#在i3的config中添加自动启动
+#exec . ~/.config/polybar/launch.sh
+## ==========
+
+
+## ==========
+XDM：Linux下最快的下载神器
+yay -S xdman
+## ==========
+百度网盘：
+yay -S baidunetdisk
+## ==========
+
+## ==========
+wps：中文版，想要英文版把后面那个包去掉
+yay -S wps-office wps-office-mui-zh-cn
+## ==========
+
+## ==========
+timeshift：强大好用的备份、回滚系统工具
+yay -S timeshift
+## ==========
+
+## ==========
+python3: 
+yay -S python3
+yay -S python-pip
+如果要设为默认需要升级 pip 到最新的版本 (>=10.0.0) 后进行配置：
+pip install pip -U
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+如果您到 pip 默认源的网络连接较差，临时使用本镜像站来升级 pip：
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+pip install ipython
+pip install jupyter
+## ==========
+
+
+## ==========
+## ==========
+
+
+curl增强版，使得发送的请求更加直观，带高亮：
+yay -S httpie
+用法： http www.baidu.com
+
+模糊搜索工具，可以模糊搜索文件，历史命令，进程等等：
+yay -S fzf
+
+加强版find：
+yay -S fd
+用法： fd jpg
+
+grep加强版，更快，而且带彩色输出：
+yay -S ripgrep
+用法： ls | rg jpg
+
+
+
+高亮版man：
+yay -S tldr
+
+增强版ls，后者带图标显示：
+yay -S exa
+yay -S lsd
+使用： exa -l ;  lsd -l
+
+系统资源监控工具：
+yay -S htop
+yay -S glances
+htop是top的增强版本，不仅漂亮，而且还带了很多强大的功能，
+比如排序，kill进程，搜索，按树形表示进程等
+glances使用Python编写，与htop相比，还增加了温度监控、网络IO监控、磁盘IO监控等功能，
+但是没有htop的排序功能，且颜色较为单一
+
+镜像刻录软件：
+yay -S balena-etcher
+
+
+#展示Linux系统信息:
+screenfetch
+
+
+
+
+
+
+
+
+
