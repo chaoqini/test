@@ -21,5 +21,17 @@ ssh -T git@github.com
 $ ssh -T git@github.com
 	Hi chaoqini! You've successfully authenticated, but GitHub does not provide shell access.
 
+仓库更新：
+git status       //查看仓库状态
+git add *      //用于更新所有代码
+git commit -m ""             //提交的备注
+git push  //将本地仓库的代码更新到github的仓库
+
+
+
+
+
+
+
 
 
