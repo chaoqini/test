@@ -6,6 +6,20 @@ git branch -M main
 git remote add origin git@github.com:chaoqini/test.git
 git push -u origin main
 
+ssh-keygen -t rsa -C "chaoqini@qq.com"
+途中会让你输入密码啥的，不需要管，一路回车即可，会生成你的ssh key。（如果重新生成的话会覆盖之前的ssh key。） 
+ssh -v git@github.com
+　　No more authentication methods to try.  
+　　Permission denied (publickey).
+ssh-agent -s 
+ssh-add ~/.ssh/id_rsa
+ssh-agent bash
+ssh-add ~/.ssh/id_rsa_name
+vim ~/.ssh/id_rsa.pub
+打开你刚刚生成的id_rsa.pub，将里面的内容复制，进入你的github账号，在settings下，SSH and GPG keys下new SSH key，然后将id_rsa.pub里的内容复制到Key中，完成后Add SSH Key。
+ssh -T git@github.com 
+$ ssh -T git@github.com
+	Hi chaoqini! You've successfully authenticated, but GitHub does not provide shell access.
 
 
 
