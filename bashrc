@@ -142,6 +142,8 @@ ex ()
 
 
 ## ==========
+export PATH=$PATH:~/bash_proj
+## ==========
 export EDITOR='/usr/bin/vim'
 ## ==========
 alias la='ls -ahG'
@@ -164,6 +166,7 @@ alias ipy='ipython'
 alias jpt='jupyter notebook'
 ## ==========
 alias pp='cd ~/python_proj'
+alias sp='cd ~/bash_proj'
 alias wine='cd /mnt/winE'
 ## ==========
 
