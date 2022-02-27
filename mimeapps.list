@@ -17,6 +17,11 @@ video/x-ms-wmv=vlc.desktop
 video/x-ogm+ogg=vlc.desktop
 video/x-theora+ogg=vlc.desktop
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=wps-office-et.desktop
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
 
 [Added Associations]
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=wps-office-et.desktop;

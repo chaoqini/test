@@ -142,7 +142,7 @@ ex ()
 
 
 ## ==========
-export PATH=$PATH:~/bash_proj
+export PATH=$PATH:~/proj_sh:~/proj_py
 ## ==========
 export EDITOR='/usr/bin/vim'
 ## ==========
@@ -165,8 +165,8 @@ alias fcitx='fcitx-configtool &'
 alias ipy='ipython'
 alias jpt='jupyter notebook'
 ## ==========
-alias pp='cd ~/python_proj'
-alias sp='cd ~/bash_proj'
+alias pp='cd ~/proj_py'
+alias sp='cd ~/proj_sh'
 alias wine='cd /mnt/winE'
 ## ==========
 
